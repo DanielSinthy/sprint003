@@ -10,7 +10,7 @@ const users = {
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (users[username] && users[username] === password) {
-    res.status(200).send("Logged in successfully!");
+    res.redirect('/dashboard');
   } else {
     res.status(401).send("Authentication failed");
   }
