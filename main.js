@@ -1,14 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/authRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
 const app = express();
 const port = 3000;
+
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: true }));
 
 app.use(authRoutes);
+
+app.use(dashboardRoutes);
 
 
 app.get('/', (req, res) => {
