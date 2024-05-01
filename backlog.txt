@@ -12,4 +12,5 @@ Sprint02:
 
 
 
-Sprint03
+Sprint03 - view templates and dynamic content
+- Story 001: Display User Dashboard
